@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+void cuburi(int n)
+{
+    int b;
+
+    for( b=n; b>=1; b--)
+    {
+
+        n=b*b*b;
+
+        cout<<n<<" ";
+
+
+    }
+}
+int main()
+{
+    int n;
+    cout<<"n=";
+    cin>>n;
+    cuburi(n);
+
+    return 0;
+}
