@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+void hanoi (int k,char from,char to,char temp)
+{
+    if(k==1)
+    {
+        cout<<k<<"."<< from <<" -> "<<temp<<endl;
+        return;
+    }
+    hanoi(k-1,from,temp,to);
+    cout<<k<<"."<< from <<" -> "<<temp<<endl;
+    hanoi(k-1,to,from,temp);
+
+
+}
+int main()
+{
+    int k;
+    cout<<"k=";
+    cin>>k;
+    hanoi(k,'A','B','C');
+    return 0;
+}
