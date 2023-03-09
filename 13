@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> vec;
+    int n, pos, hossz,x;
+
+    cout<<"n=";
+    cin>>n;
+
+
+    for (int i = 0; i < n; i++)
+    {
+        cout<<"szam=";
+        cin>>x;
+        vec.push_back(x);
+    }
+    cout<<"pos=";
+    cin>>pos;
+    cout<<"hossz=";
+    cin>>hossz;
+    vec.erase(vec.begin()+pos,vec.begin()+pos+hossz);
+
+    for(int i=0; i<vec.size(); i++)
+    {
+        cout<<vec[i]<<" ";
+    }
+    return 0;
+}
